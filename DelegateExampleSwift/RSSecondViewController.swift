@@ -76,7 +76,7 @@ class RSSecondViewController: RSBaseViewControllerWithDelegate, UITableViewDeleg
         
         cell.subtitle.numberOfLines = 0
         
-        println(cell.contentView.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize))
+//        println(cell.contentView.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize))
         
         return cell
     }
