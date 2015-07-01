@@ -22,6 +22,9 @@ class RSSecondViewController: RSBaseViewControllerWithDelegate, UITableViewDeleg
         
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
+        
+        self.tableView.estimatedRowHeight = 64
+        self.tableView.rowHeight = UITableViewAutomaticDimension
     }
     
 
@@ -36,11 +39,19 @@ class RSSecondViewController: RSBaseViewControllerWithDelegate, UITableViewDeleg
         
         indexPath = self.tableView.indexPathForCell(cell);
         
-        println("Button from cell #\(indexPath.row) clicked! - [\(__FILE__.lastPathComponent.stringByDeletingPathExtension) func: \(__FUNCTION__)]")
+        let n = indexPath.row + 1
+        
+        println("Button from cell #\(n) clicked! - [\(__FILE__.lastPathComponent.stringByDeletingPathExtension) func: \(__FUNCTION__)]")
+        
+        self.alert("Button Clicked!", message: "You clicked on the button from the row #\(n)")
     }
     
     
     // MARK: - Table View Data Source
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1;
+    }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
@@ -48,24 +59,35 @@ class RSSecondViewController: RSBaseViewControllerWithDelegate, UITableViewDeleg
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell") as RSTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! RSTableViewCell
         
         cell.delegate = self
         
-        cell.title.text = "Title #\(indexPath.row)"
-        cell.subtitle.text = "Subtitle #\(indexPath.row)"
+        let n = indexPath.row + 1
+        
+        cell.title.text = "Title #\(n)"
+        cell.title.numberOfLines = 0
+        
+        if indexPath.row % 2 == 0 {
+            cell.subtitle.text = "Subtitle... \n\nwith different height :)"
+        } else {
+            cell.subtitle.text = "Subtitle"
+        }
+        
+        cell.subtitle.numberOfLines = 0
+        
+        println(cell.contentView.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize))
         
         return cell
     }
     
     
-    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 45
-    }
+    // MARK: - Alert
     
-    
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 45
+    func alert(title: String, message: String) -> Void {
+        let alert = UIAlertView(title: title, message: message, delegate: nil, cancelButtonTitle: "OK")
+        
+        alert.show()
     }
 
 }

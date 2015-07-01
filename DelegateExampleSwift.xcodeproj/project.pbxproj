@@ -493,6 +493,7 @@
 				C9EA7A011A04199E002132B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C9EA7A021A04199E002132B9 /* Build configuration list for PBXNativeTarget "DelegateExampleSwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +502,7 @@
 				C9EA7A041A04199E002132B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
