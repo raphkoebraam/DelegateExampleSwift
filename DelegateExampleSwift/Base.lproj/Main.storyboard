@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mTJ-LX-n1q">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mTJ-LX-n1q">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -113,10 +113,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Kmo-BR-zlD" firstAttribute="top" secondItem="TKN-E5-4uh" secondAttribute="bottom" id="39N-Za-0jD"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="TKN-E5-4uh" secondAttribute="trailing" constant="-16" id="X2J-oO-vnW"/>
-                            <constraint firstItem="TKN-E5-4uh" firstAttribute="top" secondItem="Qyd-gu-RL6" secondAttribute="topMargin" id="Z6T-Hz-4ug"/>
-                            <constraint firstItem="TKN-E5-4uh" firstAttribute="leading" secondItem="Qyd-gu-RL6" secondAttribute="leadingMargin" constant="-16" id="kra-iN-EOL"/>
+                            <constraint firstItem="TKN-E5-4uh" firstAttribute="top" secondItem="Qyd-gu-RL6" secondAttribute="top" id="CyC-gR-eFH"/>
+                            <constraint firstItem="Kmo-BR-zlD" firstAttribute="top" secondItem="TKN-E5-4uh" secondAttribute="bottom" id="EAF-Ki-fUG"/>
+                            <constraint firstAttribute="trailing" secondItem="TKN-E5-4uh" secondAttribute="trailing" id="YF3-X0-wqo"/>
+                            <constraint firstItem="TKN-E5-4uh" firstAttribute="leading" secondItem="Qyd-gu-RL6" secondAttribute="leading" id="qRM-av-80Z"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YHr-pR-6zn"/>
